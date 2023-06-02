@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .news-ticker {
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      background-color: #ddd;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+    .news-ticker span {
+      display: inline-block;
+      padding: 10px;
+      animation: scroll 20s linear infinite;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="news-ticker">
+  <span>Latest News: This is a sample news ticker item. | Another news item. | And another news item. | Here is more news. | And so on...</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Card</title>
+    <style>
+        .card {
+            margin: 0 1%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+            opacity: 0;
+            transition: opacity 2s;
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .fade-up {
+            transform: translateY(20px);
+            animation: fadeUp 2s ease-in-out forwards;
+        }
+
+        @keyframes fadeUp {
+            0% {opacity: 0; transform: translateY(20px);}
+            100% {opacity: 1; transform: translateY(0);}
+        }
+
+        #para {
+            display: none;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="card fade-up">
+        <h2>Title</h2>
+        <p id="para">This is a paragraph.</p>
+        <button id="plus">+</button>
+        <button id="minus">-</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.card').css('opacity', '1');
+
+            $("#plus").click(function(){
+                $("#para").slideDown();
+            });
+
+            $("#minus").click(function(){
+                $("#para").slideUp();
+            });
+        });
+    </script>
+</body>
+</html>
